@@ -79,6 +79,9 @@ img{
     border-bottom: 1px solid #E7E9FC;
     padding-top: 24px;
     padding-bottom: 24px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
 }
 
 .page-header-container{
@@ -126,6 +129,12 @@ img{
     color: #404BBF;
 }
 
+.menu-link:hover::after{
+    width: 100px;
+    height: 5px;
+    background-color: black;
+    content: "";
+}
 .address-list {
     font-style: normal;
     font-size: 16px;
@@ -156,6 +165,13 @@ img{
     padding-top: 188px;
     padding-bottom: 188px;
     text-align: center;
+    background-image: linear-gradient(to bottom,
+            rgba(46, 47, 66, 0.70),
+            rgba(46, 47, 66, 0.70)), 
+            url("/images/people-office.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 .text-hero {
     color: #FFF;
