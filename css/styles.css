@@ -122,6 +122,8 @@ img{
     letter-spacing: 0.02em;
     padding-top: 24px;
     padding-bottom: 24px;
+    width: max-content;
+    position: relative;
 }
 
 .menu-link:hover,
@@ -129,10 +131,15 @@ img{
     color: #404BBF;
 }
 
-.menu-link:hover::after{
-    width: 100px;
-    height: 5px;
-    background-color: black;
+.menu-link:hover::after,
+.menu-link:focus::after{
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #404BBF;
+    margin-top: 20px;
+    position: absolute;
     content: "";
 }
 .address-list {
@@ -168,10 +175,10 @@ img{
     background-image: linear-gradient(to bottom,
             rgba(46, 47, 66, 0.70),
             rgba(46, 47, 66, 0.70)), 
-            url("./images/people-office.jpg");
+            url("../images/people-office.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: contain;
 }
 .text-hero {
     color: #FFF;
