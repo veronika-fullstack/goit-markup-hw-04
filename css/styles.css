@@ -124,6 +124,7 @@ img{
     padding-bottom: 24px;
     width: max-content;
     position: relative;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-link:hover,
@@ -156,6 +157,7 @@ img{
 
 .address-link {
     color: #434455;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-link:hover,
@@ -192,7 +194,7 @@ img{
 }
 .order-button {
     color: #FFF;
-    background: #4D5AE5;
+    background-color: #4D5AE5;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -205,10 +207,11 @@ img{
     border: none;
     border-radius: 4px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .order-button:hover,
 .order-button:focus {
-    background: #404BBF;
+    background-color: #404BBF;
 }
 
 
@@ -219,10 +222,12 @@ img{
     padding-top: 120px;
     padding-bottom: 120px;
 }
+
 .benefits {
     display: flex;
     gap: 24px;
 }
+
 .visually-hidden{
     position: absolute;
     width: 1px;
@@ -235,10 +240,24 @@ img{
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
+
 .benefits-list-item{
     flex-basis: calc((100% - 72px) / 4);
 }
+
 .benefits-title{
+    margin-bottom: 8px;
+}
+
+.icon-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 264px;
+    height: 112px;
+    border-radius: 4px;
+    border: 1px solid #8E8F99;
+    background: #F4F4FD;
     margin-bottom: 8px;
 }
 
@@ -276,6 +295,29 @@ img{
     margin-bottom: 8px;
 }
 
+.social-list-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: #4D5AE5;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-list-link:hover,
+.social-list-link:focus{
+    background-color: #404BBF;
+}
+
+.social-list {
+    display: flex;
+    column-gap: 24px;
+    justify-content: center;
+    margin-top: 8px;
+}
+
 
 /* ======== P O R T F O L I O   S E C T I O N ========*/
 
@@ -300,6 +342,29 @@ img{
     width: calc((100% - 48px) / 3);
 }
 
+.portfolio-card:hover .overlay,
+.portfolio-card:focus .overlay{
+    transform: translateY(0%);
+}
+
+.portfolio-img-container{
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 40px 32px;
+    background-color: #4D5AE5;
+    overflow: auto;
+    transform: translateY(100%);
+    transition: 250ms ease-out;
+}
+
 .portfolio-text-container{
     padding: 32px 16px;
     border: 1px solid #E7E9FC;
@@ -314,8 +379,13 @@ img{
 
 .page-footer {
     background: #2E2F42;
-    padding-top: 100px;
+    padding-top: 102px;
     padding-bottom: 100px;
+}
+
+.footer-container{
+    display: flex;
+    align-items: baseline;
 }
 
 .white-text {
@@ -329,4 +399,35 @@ img{
 
 .footer-text{
     max-width: 264px;
+}
+
+.social-media-footer{
+    margin-left: 120px;
+}
+
+.alternative-p{
+    color: #FFF;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.social-list-footer {
+    display: flex;
+    column-gap: 16px;
+}
+
+.social-link-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: #4D5AE5;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-link-footer:hover,
+.social-link-footer:focus{
+    background-color: #31D0AA;
 }
